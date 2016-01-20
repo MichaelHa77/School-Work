@@ -1,0 +1,15 @@
+#!/bin/bash
+#print out every other line in every file in current directory
+clear
+FILES=$(PWD)
+for f in $FILES
+do
+  i=$(awk '{x++} END {print x}' $f)
+  for (( j=2; j<=$i; j= j+2 ))
+  do
+  	echo -n "$f" | sed "s/.*\///" 
+  	echo -n ": "
+  	sed -n ${j}p $f
+  done
+  echo
+done
