@@ -10,6 +10,10 @@ class Conversion {
         for(int i = 0; i < 36; i++){
             System.out.println("bae[" + i + "] = " + bae[i]);
         }
+        for(int i = 0; i < 36; i++){
+            System.out.print(bae[i]);
+        }
+		System.out.println();
 
         //Testing BitseqToDigitseq:
         int encrypted [] = new int[9];
